@@ -16,7 +16,6 @@ public class loginPage {
     @FindBy(xpath = "/html/body/div[3]/div/div[2]/div/form/button")
     WebElement btn_login;
 
-
     public void verifyAlreadyLoginPage(String title) throws InterruptedException {
         String textTitle = txtTitle.getText();
         Assert.assertEquals(textTitle, title);
@@ -37,6 +36,5 @@ public class loginPage {
             }
         }
     }
-
 }
 
