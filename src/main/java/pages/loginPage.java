@@ -24,6 +24,7 @@ public class loginPage {
 
     public void clickSelectOption() throws InterruptedException {
         select_option.click();
+        Thread.sleep(2000);
     }
 
     public void selectUserName(String inputValue) throws InterruptedException {
@@ -31,7 +32,7 @@ public class loginPage {
         for (WebElement customerName : listCustomerName) {
             if (customerName.getText().toLowerCase().equalsIgnoreCase(inputValue)) {
                 customerName.click();
-                Thread.sleep(4000);
+                Thread.sleep(2000);
                 break;
             }
         }
