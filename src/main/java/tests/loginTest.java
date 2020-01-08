@@ -30,14 +30,13 @@ public class loginTest extends PageProvider {
     @When("^I choose username as(.*)$")
     public void chooseUserName(String value) throws InterruptedException {
         getLoginpage().selectUserName(value);
-        Thread.sleep(4000);
+        Thread.sleep(3000);
     }
 
-//    @When("^I choose username with value as (\\d+)$")
-//    public void i_choose_username_with_value_as(int arg1) throws Throwable {
-//        getLoginpage().selectUserName(arg1);
-//        Thread.sleep(4000);
-//        throw new PendingException();
+//   @When("^I click on login button$")
+//    public void clickLoginButton() throws InterruptedException {
+//        getLoginpage().clickLoginButton();
+//        Thread.sleep(3000);
 //    }
 
 }

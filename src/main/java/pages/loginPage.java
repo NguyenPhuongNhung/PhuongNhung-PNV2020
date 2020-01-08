@@ -1,17 +1,21 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import java.util.List;
 
 public class loginPage {
     @FindBy(className = "mainHeading")
     WebElement txtTitle;
     @FindBy(xpath = "//*[@id=\"userSelect\"]")
     WebElement select_option;
-    @FindBy(xpath = "//*[@id=\"userSelect\"]")
-    Select listOption;
+    @FindBy(xpath = "/html/body/div[3]/div/div[2]/div/form/button")
+    WebElement btn_login;
+
 
     public void verifyAlreadyLoginPage(String title) throws InterruptedException {
         String textTitle = txtTitle.getText();
@@ -23,10 +27,17 @@ public class loginPage {
     }
 
     public void selectUserName(String inputValue) throws InterruptedException {
-        listOption.selectByValue(inputValue);
+        List<WebElement> listCustomerName = select_option.findElements(By.tagName("option"));
+        for (WebElement customerName : listCustomerName) {
+            if (customerName.getText().toLowerCase().equalsIgnoreCase(inputValue)) {
+                customerName.click();
+                Thread.sleep(4000);
+                break;
+            }
+        }
     }
-//    public void selectUserName(int inputValue) throws InterruptedException {
-//        listOption.selectByIndex(inputValue);
+//   public void clickLoginButton() throws InterruptedException {
+//        btn_login.click();
 //    }
 }
 
