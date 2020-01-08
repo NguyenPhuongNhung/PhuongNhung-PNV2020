@@ -36,8 +36,6 @@ public class loginPage {
             }
         }
     }
-//   public void clickLoginButton() throws InterruptedException {
-//        btn_login.click();
-//    }
+
 }
 

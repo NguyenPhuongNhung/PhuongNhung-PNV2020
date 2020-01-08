@@ -33,10 +33,5 @@ public class loginTest extends PageProvider {
         Thread.sleep(3000);
     }
 
-//   @When("^I click on login button$")
-//    public void clickLoginButton() throws InterruptedException {
-//        getLoginpage().clickLoginButton();
-//        Thread.sleep(3000);
-//    }
 
 }
